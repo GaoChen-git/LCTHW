@@ -181,3 +181,9 @@ printf("TEST: %d is same as %d\n", tester(2, 3), sorted_order(2, 3));
 char *(*coolness_cb)(int awesome_levels)
 ```
 ex18:使用`typedef`定义一个指针函数类型，来用在函数参数传递需要传递另一个回调函数时，定义指针函数用于接收回调函数参数
+```c
+// ex18.c:20
+typedef int (*compare_cb)(int a, int b);
+// ex18.c:26
+int *bubble_sort(int *numbers, int count, compare_cb cmp)
+```
