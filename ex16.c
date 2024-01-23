@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <string.h>     // strdup();
 
+// 创建结构体
 struct Person {
     char *name;
     int age;
@@ -10,12 +11,13 @@ struct Person {
     int weight;
 };
 
+// 定义一个Person结构体类型的函数
 struct Person *Person_create(char *name, int age, int height, int weight)
 {
-    struct Person *who = malloc(sizeof(struct Person));
+    struct Person *who = malloc(sizeof(struct Person));     // malloc传递结构体大小
     assert(who != NULL);
 
-    who->name = strdup(name);
+    who->name = strdup(name);   // 将字符串复制到新建立的空间
     who->age = age;
     who->height = height;
     who->weight = weight;

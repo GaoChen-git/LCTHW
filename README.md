@@ -167,3 +167,17 @@ C中的结构体是其它数据类型（变量）的一个集合，它们储存�
 
 最后，当一个程序退出时，OS会为你清理所有的资源，但是有时不会立即执行。一个惯用法（也是本次练习中用到的）是立即终止并且让OS清理错误。
 ## 练习18：函数指针
+函数指针格式：
+```c
+int (*POINTER_NAME)(int a, int b)
+```
+可用作指向一个函数：
+```c
+int (*tester)(int a, int b) = sorted_order;
+printf("TEST: %d is same as %d\n", tester(2, 3), sorted_order(2, 3));
+```
+返回指针的指针函数:
+```c
+char *(*coolness_cb)(int awesome_levels)
+```
+ex18:使用`typedef`定义一个指针函数类型，来用在函数参数传递需要传递另一个回调函数时，定义指针函数用于接收回调函数参数
