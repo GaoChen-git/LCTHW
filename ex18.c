@@ -57,6 +57,7 @@ int reverse_order(int a, int b)
     return b - a;
 }
 
+
 int strange_order(int a, int b)
 {
     if(a == 0 || b == 0) {
